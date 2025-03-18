@@ -363,9 +363,8 @@ img {
 .portfolio-item .item-name {
   padding: 32px 16px;
   border-bottom: 1px solid #e7e9fc;
-  border-bottom: 1px solid #e7e9fc;
-  border-right: 1px solid #e7e9fc;
   border-left: 1px solid #e7e9fc;
+  border-right: 1px solid #e7e9fc;
 }
 .portfolio-title {
   font-weight: 700;
@@ -391,6 +390,35 @@ img {
   letter-spacing: 0.02em;
   color: var(--slate);
 }
+.portfolio .tumb {
+  position: relative;
+  overflow: hidden;
+}
+.tumb .text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  background-color: #4d5ae5;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  transform: translatey(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-item:hover .item-name {
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+.portfolio-item:hover .text {
+  transform: translatey(0);
+}
+
 /* #endregion portfolio */
 /* #region footer */
 .page-footer {
